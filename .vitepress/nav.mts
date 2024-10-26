@@ -8,8 +8,8 @@ export default [
                 link: '/spring/分布式消息框架RabbitMQ-.md'
             },
             {
-                text: 'mysql',
-                link: '/mysql/hello.md'
+                text: '开发工具',
+                link: '/开发工具/列表.md'
             },
             {
                 text: '虚拟机',
