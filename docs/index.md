@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: 分布式消息框架-RabbitMQ
-      link: '/spring/分布式消息框架RabbitMQ-.md'
+      link: '/spring/微服务/分布式消息框架RabbitMQ-.md'
       # target: _blank 
     # - theme: alt
     #   text: API Examples

@@ -5,7 +5,7 @@ export default [
         items: [
             {
                 text: 'spring',
-                link: '/spring/分布式消息框架RabbitMQ-.md'
+                link: '/spring/微服务/分布式消息框架RabbitMQ-.md'
             },
             {
                 text: '开发工具',
