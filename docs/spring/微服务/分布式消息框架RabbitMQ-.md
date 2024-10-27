@@ -1,4 +1,4 @@
-# RabbitMQ
+# 分布式消息框架-RabbitMQ
 
 ## 一、什么是RabbitMQ
 
