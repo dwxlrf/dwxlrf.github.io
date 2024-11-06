@@ -14,7 +14,9 @@ export default {
     '/服务器/':[{
         text: '服务器',
             items: [
+                { text: '列表', link: '/服务器/列表.md' },
                 { text: '容器化技术-Docker', link: '/服务器/容器化技术-Docker.md' },
+                { text: '数据缓存技术-Redis', link: '/服务器/数据缓存技术-Redis.md' },
                 // { text: 'Runtime API Examples', link: '/api-examples' }
             ],
             collapsed: false
