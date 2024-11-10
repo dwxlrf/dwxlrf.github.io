@@ -1,4 +1,10 @@
 export default {
+    '/Java/':{
+        text: 'Java SE',
+            items: [
+                { text: 'Java基础', link: '/Java/Java基础.md' }
+            ],
+    },
     '/spring/':[
         {
             text: '微服务',
@@ -11,7 +17,7 @@ export default {
             collapsed: false //可以拉起文章列表操作
         }
     ],
-    '/服务器/':[{
+    '/服务器/':{
         text: '服务器',
             items: [
                 { text: '列表', link: '/服务器/列表.md' },
@@ -19,14 +25,14 @@ export default {
                 { text: '数据缓存技术-Redis', link: '/服务器/数据缓存技术-Redis.md' },
                 // { text: 'Runtime API Examples', link: '/api-examples' }
             ],
-            collapsed: false
-    }],
-    '/开发工具/':[{
+            // collapsed: false
+    },
+    '/开发工具/':{
         text: '开发工具',
             items: [
                 { text: '列表', link: '/开发工具/列表.md' },
                 { text: '代码管理工具-Git', link: '/开发工具/代码管理工具-Git.md' }
             ],
-            collapsed: false
-    }],
+            // collapsed: false
+    },
 }

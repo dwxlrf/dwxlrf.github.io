@@ -2,7 +2,7 @@
 
 ## 一、现有项目的缺陷
 
-### 1、数据缓存
+### 1 数据缓存
 
 | 餐馆王App搞抢购活动                                         |
 | ----------------------------------------------------------- |
@@ -14,7 +14,7 @@
 
 
 
-### 2、分布式Session
+### 2 分布式Session
 
 | 原始登录方式                                                 |
 | ------------------------------------------------------------ |
@@ -28,7 +28,7 @@
 
 ## 二、Redis介绍与安装
 
-### 1、概述
+### 1 概述
 
 - 是一个由C语言开发的基于key-value形式的非关系型数据库
   - key-value：键值对【键：String，值：五种数据类型】
@@ -43,7 +43,7 @@
   - 中文：http://www.redis.cn/
   - 英文：https://redis.io/
 
-### 2、安装
+### 2 安装
 
 #### 2.1 基于tar.gz安装
 
@@ -121,7 +121,7 @@ docker-compose up -d
 
 ## 三、Redis的客户端工具
 
-### 1、命令行客户端
+### 1 命令行客户端
 
 ```shell
 #默认情况下，连接的是本地的redis，且端口号是默认的6379
@@ -132,7 +132,7 @@ redis-cli
 redis-cli -h 192.168.145.128 -p 6379
 ```
 
-### 2、图形化客户端【windows版本】
+### 2 图形化客户端【windows版本】
 
 - RedisDesktopManager【安装：一路默认下一步即可】
 
@@ -141,7 +141,7 @@ redis-cli -h 192.168.145.128 -p 6379
 | ![](assets/image-20220406153728364.png) |
 | ![](assets/image-20220406153814755.png) |
 
-### 3、Java客户端
+### 3 Java客户端
 
 - Jedis：Redis官方提供的一个Java操作Redis的API
 - RedisTemplate：SpringBoot集成Redis提供的API
@@ -152,7 +152,7 @@ redis-cli -h 192.168.145.128 -p 6379
 
 > 这里的数据类型指的是值的数据类型
 
-### 1、五种数据类型
+### 1 五种数据类型
 
 > - string：字符串
 > - hash：对象
@@ -164,7 +164,7 @@ redis-cli -h 192.168.145.128 -p 6379
 | ------------------------------------------------------------ |
 | ![](assets/image-20220406154943233.png) |
 
-### 2、string
+### 2 string
 
 ```shell
 #设置值
@@ -232,7 +232,7 @@ decrby age 20
 | ![](assets/image-20220406160015815.png) |
 | ![](assets/image-20220406160418426.png) |
 
-### 3、hash
+### 3 hash
 
 ```shell
 #设置值，必须指定大key和小key
@@ -273,7 +273,7 @@ hsetnx person age 25
 
 
 
-### 4、list
+### 4 list
 
 > 在操作list时
 >
@@ -328,7 +328,7 @@ lrem names 2 tom
 
 
 
-### 5、set
+### 5 set
 
 ```shell
 #存值
@@ -384,7 +384,7 @@ smove myset1 myset3 aa
 
 
 
-### 6、zset
+### 6 zset
 
 ```shell
 #向有序集合中增加元素
@@ -459,7 +459,7 @@ ZREMRANGEBYSCORE tuhaobang 10 20
 
 
 
-### 7、通用命令
+### 7 通用命令
 
 - 跟key相关的
 
@@ -529,7 +529,7 @@ monitor
 
 
 
-### 8、查看redis性能的命令
+### 8 查看redis性能的命令
 
 ```shell
 #redis写的性能
@@ -551,7 +551,7 @@ redis-benchmark get
 >
 > redis所有相关配置信息都在这个配置文件中，其中很优秀的设计都可以从其中看到
 
-### 1、带着配置去运行Redis的服务
+### 1 带着配置去运行Redis的服务
 
 ```shell
 ./redis-server ../redis.conf
@@ -602,12 +602,12 @@ requirepass ghyredis
 
 ## 六、Jedis
 
-### 1、概述
+### 1 概述
 
 - 是Redis官方提供一款Java操作Redis的API
 - Jedis方法就是Redis的命令
 
-### 2、快速入门
+### 2 快速入门
 
 - 导入依赖
 
@@ -647,7 +647,7 @@ public void quickTest() throws Exception {
 }
 ```
 
-### 3、JedisPool的使用
+### 3 JedisPool的使用
 
 ```java
 /**
@@ -674,7 +674,7 @@ public void jedisPoolTest() throws Exception {
 }
 ```
 
-### 4、JedisPool工具类封装
+### 4 JedisPool工具类封装
 
 ```java
 package com.qf.java66.config;
@@ -722,7 +722,7 @@ public void jedisPoolUtilsTest() throws Exception {
 }
 ```
 
-### 5、五种数据类型的使用
+### 5 五种数据类型的使用
 
 ```java
 package com.ghy.java66.test;
@@ -858,7 +858,7 @@ public class JedisTest {
 
 
 
-### 6、Jedis如何保存一个Java对象
+### 6 Jedis如何保存一个Java对象
 
 #### 6.1 string存储【json】
 
@@ -940,7 +940,7 @@ public void saveObjectUseByteArrayTest() throws Exception {
 | ------------------------------------------------------------ |
 | ![](assets/image-20220407150841832.png) |
 
-### 7、Jedis的管道操作
+### 7 Jedis的管道操作
 
 - 不用管理来存储1000个数据到redis中
 
@@ -1001,7 +1001,7 @@ public void test2() throws Exception {
 
 > RedisTemplate：在SpringBoot中操作Redis的模板对象
 
-### 1、导入依赖
+### 1 导入依赖
 
 ```xml
 <dependency>
@@ -1010,7 +1010,7 @@ public void test2() throws Exception {
 </dependency>
 ```
 
-### 2、配置文件
+### 2 配置文件
 
 ```yml
 spring:
@@ -1027,7 +1027,7 @@ spring:
         max-idle: 10
 ```
 
-### 3、测试代码
+### 3 测试代码
 
 > RedisTemplate.opsForXxx().操作
 >
@@ -1070,7 +1070,7 @@ class SpringbootRedisDemo01ApplicationTests {
 }
 ```
 
-### 4、序列化器
+### 4 序列化器
 
 #### 4.1 默认情况下
 
@@ -1176,7 +1176,7 @@ public void stringRedisTemplateTest() throws Exception {
 }
 ```
 
-### 5、操作其他数据类型
+### 5 操作其他数据类型
 
 ```java
 package com.ghy.java66.springboot.redis.demo01;
@@ -1260,7 +1260,7 @@ class SpringbootRedisDemo01ApplicationTests {
 
 
 
-### 6、存储对象
+### 6 存储对象
 
 ```java
 /**
@@ -1284,7 +1284,7 @@ public void saveObjectTest() throws Exception {
 
 
 
-### 7、管道操作
+### 7 管道操作
 
 ```java
 /**
@@ -1316,7 +1316,7 @@ public void pipelineTest() throws Exception {
 
 ## 八、docker-compose搭建redis使用配置文件
 
-### 1、docker-compose.yml文件
+### 1 docker-compose.yml文件
 
 - docker-compose.yml
 
@@ -1337,7 +1337,7 @@ services:
     command: redis-server /usr/local/redis/redis.conf
 ```
 
-### 2、redis配置文件
+### 2 redis配置文件
 
 - redis.conf
 
@@ -1345,7 +1345,7 @@ services:
 requirepass dockerredis
 ```
 
-### 3、搭建springboot工程测试
+### 3 搭建springboot工程测试
 
 - application.yml
 
@@ -1396,7 +1396,7 @@ class SpringbootDockerRedisDemo01ApplicationTests {
 
 ## 九、Redis事务
 
-### 1、MySQL中事务
+### 1 MySQL中事务
 
 - 四个特性【ACID】
 
@@ -1407,7 +1407,7 @@ class SpringbootDockerRedisDemo01ApplicationTests {
 
 - 特征：事务中所有的操作，要么全部执行成功，要么全部执行失败
 
-### 2、Redis事务
+### 2 Redis事务
 
 - 在Redis事务中，只要Redis命令的语法没有错误，就该成功的成功，该失败的失败
 
@@ -1447,11 +1447,11 @@ discard
 | ------------------------------------------------------------ |
 | ![](assets/image-20220408095830737.png) |
 
-### 3、事务的使用
+### 3 事务的使用
 
 - 虽然redis有提供事务的功能，但是一般我们也不怎么使用
 
-### 4、Java代码实现redis事务
+### 4 Java代码实现redis事务
 
 ```java
 @Test
@@ -1476,13 +1476,13 @@ public void redisTxTest() throws Exception {
 
 ## 十、Redis持久化
 
-### 1、持久化概述
+### 1 持久化概述
 
 > Redis的数据是运行在内存中的，如果服务器突然宕机，可能就会造成数据的丢失
 
 - 把Redis内存中的数据，通过一些方式永久的保存到磁盘上，这个过程被称为叫持久化
 
-### 2、持久化机制
+### 2 持久化机制
 
 > 持久化机制的配置信息在redis.conf中
 
@@ -1490,7 +1490,7 @@ public void redisTxTest() throws Exception {
 - AOF：基于日志形式【Append Only File】
 - 混合持久化：两种一起使用【会对AOF进行优化，让其使用上RDB的二进制存储数据格式】
 
-### 3、RDB机制
+### 3 RDB机制
 
 #### 3.1 redis.conf【196行-263行】
 
@@ -1629,7 +1629,7 @@ Background saving started
 
 
 
-### 4、AOF机制
+### 4 AOF机制
 
 #### 4.1 redis.conf【679行-806行】
 
@@ -1849,7 +1849,7 @@ auto-aof-rewrite-min-size 64mb
 >
 > - 下一次aof文件就会到100MB才进行重写，以此类推
 
-### 5、混合持久化
+### 5 混合持久化
 
 #### 5.1 概述
 
@@ -1875,7 +1875,7 @@ aof-use-rdb-preamble yes
 > - 在内存中数据以二进制的方式写入新的aof文件中
 > - 后面写入的数据，依旧会以aof形式的把redis命令追加到新的aof文件中
 
-### 6、RDB、AOF、混合持久化的选择
+### 6 RDB、AOF、混合持久化的选择
 
 | RDB和AOF的区别                                               |
 | ------------------------------------------------------------ |
@@ -1897,13 +1897,13 @@ aof-use-rdb-preamble yes
 >   - 性能瓶颈
 >   - 数据安全
 
-### 1、实现高可用的三种机制
+### 1 实现高可用的三种机制
 
 > 1. 主从架构
 > 2. 哨兵模式
 > 3. redis-cluster
 
-### 2、主从架构
+### 2 主从架构
 
 #### 2.1 主从架构原理与功能
 
@@ -2023,7 +2023,7 @@ info replication
 
 
 
-### 3、哨兵模式
+### 3 哨兵模式
 
 #### 3.1 哨兵的作用
 
@@ -2178,7 +2178,7 @@ info replication
 
 
 
-### 4、redis-cluster
+### 4 redis-cluster
 
 #### 4.1 原理
 
@@ -2386,11 +2386,11 @@ class SprinbootRedisClusterDemo01ApplicationTests {
 
 ## 十二、Redis淘汰策略
 
-### 1、概述
+### 1 概述
 
 - 在Redis内存不足时，Redis会通过一些机制来对当前内存进行优化，以保证能够写入新的数据
 
-### 2、会删除哪些key
+### 2 会删除哪些key
 
 - 过期的key会不会删除
   - 在向redis中插入数据时，可以设置key的过期时间，那么过期时间到了，redis会不会立即去删除这个key【不会】
@@ -2402,7 +2402,7 @@ redis在删除key时，会在后台开启一个线程去执行这个操作，那
 - 不过期的key会不会删除
   - 也会删除，在内存不足时，redis会根据指定的淘汰策略来删除key
 
-### 3、什么时候删除key
+### 3 什么时候删除key
 
 - 惰性删除
 
@@ -2416,7 +2416,7 @@ redis在后台会开启一个定时任务，定时去根据指定的淘汰策略
 redis去获取一个key的值时，会先判断这个key是否过期，如果过期，则执行删除操作
 ```
 
-### 4、淘汰策略
+### 4 淘汰策略
 
 ```shell
 ############################## MEMORY MANAGEMENT ################################
@@ -2453,7 +2453,7 @@ redis去获取一个key的值时，会先判断这个key是否过期，如果过
 
 ## 十三、Redis应用场景
 
-### 1、热点数据缓存【list】
+### 1 热点数据缓存【list】
 
 - 热点数据
   - 是指访问频率非常高的数据
@@ -2462,7 +2462,7 @@ redis去获取一个key的值时，会先判断这个key是否过期，如果过
 | ------------------------------------------------------------ |
 | ![](assets/image-20220409141228286.png) |
 
-### 2、分布式Session【string】
+### 2 分布式Session【string】
 
 | 分布式Session                                               |
 | ----------------------------------------------------------- |
@@ -2470,7 +2470,7 @@ redis去获取一个key的值时，会先判断这个key是否过期，如果过
 
 
 
-### 3、计数器【string[incr]】
+### 3 计数器【string[incr]】
 
 ```shell
 INCR article:readcount:{文章id}  	#阅读一次，+1
@@ -2483,7 +2483,7 @@ GET article:readcount:{文章id}    #获取阅读数量
 
 
 
-### 4、排行榜【zset】
+### 4 排行榜【zset】
 
 - 某网红的直播间打赏排行榜
 
@@ -2491,7 +2491,7 @@ GET article:readcount:{文章id}    #获取阅读数量
 
 
 
-### 5、分布式锁【string[setnx]】
+### 5 分布式锁【string[setnx]】
 
 > - 获取苹果的步骤【苹果总共3个】
 >   - 拿苹果
@@ -2513,7 +2513,7 @@ GET article:readcount:{文章id}    #获取阅读数量
 
 
 
-### 6、分布式ID【string[incr]】
+### 6 分布式ID【string[incr]】
 
 | 用户下单                                                    |
 | ----------------------------------------------------------- |
@@ -2525,7 +2525,7 @@ GET article:readcount:{文章id}    #获取阅读数量
 
 
 
-### 7、购物车【hash】
+### 7 购物车【hash】
 
 - 以用户id为key
 - 商品id为field
@@ -2560,7 +2560,7 @@ hgetall cart:1001
 
 
 
-### 8、微关系【set】
+### 8 微关系【set】
 
 - 微信点赞
 
@@ -2616,7 +2616,7 @@ SDIFF CSet ASet->(a, f)
 
 
 
-### 1、缓存穿透
+### 1 缓存穿透
 
 > 客户端去访问缓存中没有，数据库中也没有的数据。就好像穿透了缓存层，直达数据库
 >
@@ -2811,7 +2811,7 @@ SDIFF CSet ASet->(a, f)
 
 
 
-### 2、缓存击穿
+### 2 缓存击穿
 
 #### 2.1 概述
 
@@ -2827,7 +2827,7 @@ SDIFF CSet ASet->(a, f)
 
 
 
-### 3、缓存雪崩
+### 3 缓存雪崩
 
 #### 3.1 概述
 
@@ -2854,7 +2854,7 @@ SDIFF CSet ASet->(a, f)
 >
 > 当请求并发数高的情况下，很可能会出现多次查询数据库的情况
 
-### 1、案例演示
+### 1 案例演示
 
 ```java
 package com.ghy.java66.sprinboot.rediscluster.demo01;
@@ -2922,7 +2922,7 @@ public class SpringbootRedisDemo02Test {
 | ![](assets/image-20220411105445335.png) |
 | ![](assets/image-20220411105008484.png) |
 
-### 2、解决方案
+### 2 解决方案
 
 #### 2.1 加锁
 
@@ -3022,7 +3022,7 @@ public void testHotData(){
 
 
 
-### 3、redission实现分布式锁
+### 3 redission实现分布式锁
 
 #### 3.1 原理
 
@@ -3089,7 +3089,7 @@ public void testHotData(){
 
 ## 十六、redis的多路复用
 
-### 1、redis是单线程吗？
+### 1 redis是单线程吗？
 
 - 4.0以前是单线程
 - 4.0以后不是单线程
@@ -3098,7 +3098,7 @@ public void testHotData(){
 
 
 
-### 2、redis这个读写操作是单线程的，那为什么还那么快？
+### 2 redis这个读写操作是单线程的，那为什么还那么快？
 
 - redis的读写都是基于内存来执行的
 - redis的读写操作是单线程，避免了线程切换的开销

@@ -43,7 +43,7 @@ public class FeignConfig {
 
 ## 三、OpenFeign快速开始
 
-### 3.1 导入依赖
+### 1 导入依赖
 
 ```xml
   <!--openFeign-->
@@ -58,7 +58,7 @@ public class FeignConfig {
   </dependency>
 ```
 
-### 3.2 启动OpenFeign
+### 2 启动OpenFeign
 
 在启动类上添加注解`@EnableFeignClients`。当调用自身服务不在同一模块中时，需要在注解添加扫描参数，参数结果为被调用Client接口包路径
 
@@ -76,7 +76,7 @@ public class TradeApplication {
 }
 ```
 
-### 3.3 编写具体调用接口
+### 3 编写具体调用接口
 
 当前面两步弄好之后，就可以创建具体的调用接口了，前提需要保持`请求路径，方法类型，方法参数一致！！！`
 
@@ -96,7 +96,7 @@ public interface TradeClient{
 
 ## 四、解决三方调用发生的跨域
 
-### 4.1 域
+### 1 域
 
 域由三部分组成：协议、IP、端口
 
@@ -119,11 +119,11 @@ public interface TradeClient{
 - `http://10.31.10.11/items`     `http://10.31.10.12/carts  `  IP不同
 - `http://localhost:8081/items`     `http://localhost:8082/carts `     端口不同
 
-### 4.2 SpringMVC解决跨域问题
+### 2 SpringMVC解决跨域问题
 
 在控制器上增加注解 `@CrossOrigin`
 
-### 4.3 gateway网关解决跨域问题
+### 3 gateway网关解决跨域问题
 
 ``导入依赖``
 
@@ -195,7 +195,7 @@ spring:
             - Path=/pay-orders/**
 ```
 
-### 4.4 Nginx配置解决跨域问题
+### 4 Nginx配置解决跨域问题
 
 ```sh
 server {

@@ -32,6 +32,9 @@ export default defineConfig({
     //文档分级显示,否则只有前两级
     outline:"deep",
 
+    // 详细文档目录显示位置
+    aside: 'left',
+
     //文档右侧标题
     outlineTitle:"页面导航",
 
