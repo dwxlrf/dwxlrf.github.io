@@ -25,6 +25,7 @@ export default {
             text: '微服务',
             items: [
                 // { text: '列表', link: '/spring/微服务/列表.md' },
+                { text: 'SpringCloud', link: '/Java EE/微服务/SpringCloud' },
                 { text: '服务注册和发现-Nacos', link: '/Java EE/微服务/服务注册和发现-nacos' },
                 { text: '三方调用框架-OpenFeign', link: '/Java EE/微服务/三方调用框架-OpenFeign.md' },
                 { text: '分布式消息框架-RabbitMQ', link: '/Java EE/微服务/分布式消息框架RabbitMQ-.md' },
@@ -38,6 +39,7 @@ export default {
             items: [
                 // { text: '列表', link: '/服务器/列表.md' },
                 { text: '容器化技术-Docker', link: '/服务器/容器化技术-Docker.md' },
+                { text: '数据持久化技术-Mysql', link: '/服务器/数据持久化技术-Mysql.md' },
                 { text: '数据缓存技术-Redis', link: '/服务器/数据缓存技术-Redis.md' },
                 // { text: 'Runtime API Examples', link: '/api-examples' }
             ],
