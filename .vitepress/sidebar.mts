@@ -2,7 +2,8 @@ export default {
     '/Java/':{
         text: 'Java SE',
             items: [
-                { text: 'Java基础', link: '/Java/Java基础.md' }
+                { text: 'Java基础', link: '/Java/Java基础.md' },
+                { text: 'Java集合框架', link: '/Java/Java集合框架.md' }
             ],
     },
     '/spring/':[
