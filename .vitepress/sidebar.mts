@@ -7,6 +7,7 @@ export default {
                 { text: 'Java集合框架', link: '/Java/Java集合框架.md' },
                 { text: 'Java异常', link: '/Java/Java异常'},
                 { text: 'Java并发编程', link: '/Java/Java并发编程'},
+                { text: 'JavaJVM深入理解', link: '/Java/JavaJVM深入理解'},
             ],
     },
     '/Spring/':[
