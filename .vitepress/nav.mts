@@ -5,11 +5,11 @@ export default [
         items: [
             {
                 text: 'Java SE',
-                link: '/Java/Java基础.md'
+                link: '/Java SE/Java基础.md'
             },
             {
-                text: 'Spring',
-                link: '/spring/微服务/列表.md'
+                text: 'Java EE',
+                link: '/Java EE/微服务/列表.md'
             },
             {
                 text: '服务器',
