@@ -12,9 +12,9 @@ hero:
   text: "你好，我是董文祥 👋"
   tagline: 学而不思则罔
   actions:
-    - theme: brand
-      text: 分布式消息框架-RabbitMQ
-      link: '/spring/微服务/分布式消息框架RabbitMQ-.md'
+    # - theme: brand
+    #   text: 分布式消息框架-RabbitMQ
+    #   link: '/spring/微服务/分布式消息框架RabbitMQ-.md'
       # target: _blank 
     # - theme: alt
     #   text: API Examples
