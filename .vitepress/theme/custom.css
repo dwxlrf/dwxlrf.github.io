@@ -1,0 +1,42 @@
+/* @import url("https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.6.0/style.min.css"); */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg, 
+    #f00b2a, 
+    #1c15e6
+  );
+
+  /* 图标背景，设置线性渐变 */
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    #0c8fed 20%,
+    #eb09dc 100%
+  );
+
+  /* 设置模糊度 */
+  --vp-home-hero-image-filter: blur(38px);
+
+  /* --vp-c-bg: #383637; */
+  }
+/* 
+  .dark {
+
+
+  --vp-c-bg: #383637;
+
+  --vp-c-border: #faf6f1;
+
+  --vp-c-text: rgb(255, 255, 255);
+}
+
+.theme {
+  background-color: var(--vp-c-bg);
+}
+
+.vp-doc h2 {
+  margin-top: 11111;
+  border-top: none;
+} */
