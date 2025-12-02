@@ -1,5 +1,14 @@
 export default [
     { text: '首页', link: '/' },
+    { 
+        text: '高项',
+        items:[
+            {
+                text:'第8章 项目整合管理',
+                link:'/高项/第8章 项目整合管理'
+            }
+        ] 
+    },
     {
         text: '汇总',
         items: [

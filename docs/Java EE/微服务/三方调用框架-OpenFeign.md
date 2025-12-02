@@ -2,7 +2,7 @@
 
 ## 前言
 
-[服务注册和发现-nacos](http://dongwenxiang.top/Java EE/微服务/%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%92%8C%E5%8F%91%E7%8E%B0-nacos.html)
+[服务注册和发现-nacos](http://dwxlrf.top/Java EE/微服务/%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%92%8C%E5%8F%91%E7%8E%B0-nacos.html)
 
 使用此调用三方服务前需使用`nacos`将服务注册到服务中心
 
