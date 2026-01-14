@@ -9,7 +9,7 @@ hero:
     dark: /moon.png
     alt: "image not found"
   name: "DBLOG"
-  text: "你好，我是董文祥 👋"
+  text: "Hello World! 👋"
   tagline: 学而不思则罔
   actions:
     # - theme: brand
