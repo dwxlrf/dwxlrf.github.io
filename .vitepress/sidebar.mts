@@ -63,4 +63,11 @@ export default {
             ],
             // collapsed: false
     },
+    '/深入理解/':{
+        text: '深入理解',
+            items: [
+                { text: 'JDK设计', link: '/深入理解/JDK设计.md' }
+            ],
+            // collapsed: false
+    },
 }
