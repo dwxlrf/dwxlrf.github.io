@@ -36,6 +36,10 @@ export default [
                 text: '回顾',
                 link: '/回顾/数据库相关.md'
             },
+            {
+                text: '深入理解',
+                link: '/深入理解/JDK设计.md'
+            },
         ]
     }
 ];
